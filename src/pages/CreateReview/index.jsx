@@ -32,9 +32,9 @@ export function CreateReview(data) {
           <textarea type="text" className="textArea" placeholder="Review" />
           <h3>Bookmarks</h3>
           <div className="bookmarks">
-            <Bookmarks value={data.bookmarks || "tag"} />
-            <Bookmarks value={data.bookmarks || "tag"} />
-            <Bookmarks isNew placeholder="New bookmark" value={data.bookmarks || ""}/>
+            <Bookmarks  value={data.bookmarks || "tag"} />
+            <Bookmarks  value={data.bookmarks || "tag"} />
+            <Bookmarks  isNew placeholder="New bookmark" value={data.bookmarks || ""}/>
           </div>
           <footer>
             <Button title="Delete restaurant"/>

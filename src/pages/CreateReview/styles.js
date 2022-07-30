@@ -71,22 +71,22 @@ export const Form = styled.form`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: ${({ theme }) => theme.COLORS.BLACK};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     border-radius: 10px;
     padding: 16px 10px;
     gap: 24px;
   }
-  
+
   footer {
     display: flex;
     gap: 40px;
 
-    button:nth-child(1) {         
-      background-color: ${({ theme }) => theme.COLORS.BLACK};
+    button:nth-child(1) {   
+      background-color: rgba(0,0,0,0.7);
       color: ${({ theme }) => theme.COLORS.ORANGE}; 
     }
   }
   
-
+  
 
 `;
