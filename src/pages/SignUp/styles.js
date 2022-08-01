@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import backgroundImg from "../../assets/backgroundImg.jpg";
+import openEye from "../../assets/eye.svg";
+import closeEye from "../../assets/eye-off.svg";
 
 export const Container = styled.div`
   height: 100vh;
@@ -40,6 +42,38 @@ button:nth-of-type(1) {
     margin-top: 24px;
     margin-bottom: 42px;
 } 
+
+
+.inputPassword {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  button {
+    position: absolute;
+    margin-top: 49px;
+    margin-left: 250px;
+    border: none;
+
+    width: 24px;
+    height: 24px;
+    
+  }
+}
+
+.showPassword {
+  background: url(${closeEye}) no-repeat center center;
+}
+
+.hidePassword {
+  background: url(${openEye}) no-repeat center center;
+}
+
 
   
 `;

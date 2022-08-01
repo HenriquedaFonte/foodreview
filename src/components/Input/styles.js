@@ -31,5 +31,9 @@ export const Container = styled.div`
     margin-left: 24px;
   }
 
+  > svg:nth-child(3){    
+    margin-right: 24px;
+  }
+
 `;
 

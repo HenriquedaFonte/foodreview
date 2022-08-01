@@ -1,14 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
-  
   display: flex;
   align-items: center;
-  
-  background-color: ${({ theme, isNew }) => isNew ? "transparent" : theme.COLORS.BACKGROUND_900};
+
+  background-color: ${({ theme, isNew }) =>
+    isNew ? 'transparent' : theme.COLORS.BACKGROUND_900};
   color: ${({ theme }) => theme.COLORS.GRAY_300};
 
-  border: ${({ theme, isNew }) => isNew ? `1px dashed ${ theme.COLORS.GRAY_300 }` : "none"};
+  border: ${({ theme, isNew }) =>
+    isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : 'none'};
 
   border-radius: 10px;
   padding-right: 16px;
@@ -18,7 +19,7 @@ export const Container = styled.div`
     background: none;
   }
 
-  .button-delete { 
+  .button-delete {
     color: ${({ theme }) => theme.COLORS.RED};
   }
 
@@ -29,7 +30,7 @@ export const Container = styled.div`
   > input {
     width: 100%;
     height: 56px;
-    
+
     padding: 12px;
 
     font-size: 16px;
@@ -41,6 +42,5 @@ export const Container = styled.div`
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
-    
   }
-`;
+`
