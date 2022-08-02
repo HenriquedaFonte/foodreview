@@ -5,6 +5,23 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: auto;
+    scrollbar-color: #D98014 #240a0a;
+  }
+
+
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #240a0a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #D98014;
+    border-radius: 10px;
+    border: 3px solid #240a0a;
   }
 
   body {

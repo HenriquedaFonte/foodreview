@@ -13,7 +13,7 @@ export const Container = styled.div`
 
   main {
     grid-area: content;
-    overflow-y: auto;
+    
     padding: 64px 0;
   }
 
@@ -23,6 +23,7 @@ export const Content = styled.div`
   width: 100%;
   margin: 5px auto;
   padding: 0 125px;
+  overflow-y: auto;
   
   div.titleReview {
     margin-top: 24px;
