@@ -5,8 +5,18 @@ import { Button } from '../../components/Button';
 import { ButtonText } from '../../components/ButtonText';
 import { Input } from '../../components/Input';
 import { Background, Container, Form }  from './styles';
+import { useAuth } from '../../hooks/auth';
 
 export function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { signIn } = useAuth();
+
+  function handleSignIn() {
+    signIn({ email, password });
+  };
+
   const [typeInput, setTypeInput] = useState("password");
   const [classButton, setClassButton] = useState("hidePassword");
   function ToggleTypeInput() {
@@ -24,13 +34,35 @@ export function SignIn() {
         <h1>FoodReview</h1>
         <p>Application for restaurant evaluations</p>
         <h3>Login</h3>
-        <Input placeholder="Email" type="text" icon={FiMail} />
+        <Input 
+          placeholder="Email" 
+          type="text" 
+          icon={FiMail} 
+          onChange={e => setEmail(e.target.value)} 
+        />
         <div className="inputPassword">
-          <Input id="inputPassword" placeholder="Password" type={typeInput} icon={FiLock} /> 
-          <button type="button" id="btnPassword" className={classButton} onClick={ToggleTypeInput}></button>
+          <Input 
+            id="inputPassword" 
+            placeholder="Password" 
+            type={typeInput} 
+            icon={FiLock}
+            onChange={e => setPassword(e.target.value)} 
+          /> 
+          <button 
+            type="button" 
+            id="btnPassword" 
+            className={classButton} 
+            onClick={ToggleTypeInput}>
+          </button>
         </div>
-        <Button title="Login"/>        
-        <ButtonText title="SingUp" to="/signup" />       
+        <Button 
+          title="Login"
+          onClick={handleSignIn}
+        />        
+        <ButtonText 
+          title="SingUp" 
+          to="/signup" 
+        />       
       </Form>
       <Background/>
     </Container>

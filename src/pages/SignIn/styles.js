@@ -48,6 +48,7 @@ button:nth-of-type(1) {
   align-items: center;
   width: 100%;
   height: 56px;
+  margin-top: 4.5px;
 
   input {
     border-top-right-radius: 0;
