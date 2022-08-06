@@ -1,9 +1,9 @@
 import { Container } from './styles'
 
-export function Comments({ comments, className }) {
+export function Description({ description, className }) {
   return( 
   <Container className={className}>
-    {comments}
+    {description}
   </Container>
   )
 }

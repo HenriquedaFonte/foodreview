@@ -12,6 +12,7 @@ export function SignIn() {
   const [password, setPassword] = useState("");
 
   const { signIn } = useAuth();
+  
 
   function handleSignIn() {
     signIn({ email, password });
@@ -70,20 +71,6 @@ export function SignIn() {
 
 };
 
-
-// let btn = document.querySelector("#btnPassword");
-// btn.addEventListener("click", () => {
-//   console.log("teste")
-//     let input = document.querySelector("#inputPassword");
-//     if(input.getAttribute("type") == "password") {
-//       console.log('teste2')
-//         input.setAttribute("type", "text");
-//         btn.setAttribute("className", "hidePassword");
-//     } else {
-//         input.setAttribute("type", "password");
-//         btn.setAttribute("className", "showPassword");
-//     }
-//   });
 
 
 

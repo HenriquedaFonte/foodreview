@@ -15,7 +15,7 @@ export const Container = styled.header`
   padding: 0 125px;
 
   > h1 {
-    margin-right: 64px;
+    margin-right: 25px;
     font-size: 24px;
     font-weight: 700;
     color: ${({ theme }) => theme.COLORS.ORANGE}; 
@@ -27,7 +27,7 @@ export const Profile = styled.div`
   
   display: flex;
   align-items: center;
-  margin-left: 64px;
+  margin-left: 25px;
 
   img {
     width: 64px;

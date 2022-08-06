@@ -15,7 +15,8 @@ const [data, setData] = useState({});
       localStorage.setItem("@foodreview:user", JSON.stringify(user));
       localStorage.setItem("@foodreview:token", token);
 
-      api.defaults.headers.authorization = `Bearer ${token}`;
+      api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
       setData({ user, token });
     }catch (error) {
       if (error.response) {
@@ -26,19 +27,45 @@ const [data, setData] = useState({});
     };
   };
 
-function signOut() {
+  function signOut() {
   localStorage.removeItem("@foodreview:token");
   localStorage.removeItem("@foodreview:user");
 
   setData({});
-}
+  };
+
+  async function updateProfile({ user, avatarFile }) {
+    try {
+
+      if (avatarFile) {
+        const fileUploadForm = new FormData();
+        fileUploadForm.append("avatar", avatarFile);
+
+        const response = await api.patch("/users/avatar", fileUploadForm);
+        user.avatar = response.data.avatar;
+      }
+
+      await api.put("/users", user);
+      localStorage.setItem("@foodreview:user", JSON.stringify(user));
+
+      setData({ user, token: data.token});
+      alert("Profile updated!");
+
+    } catch (error) {
+      if (error.response) {
+        alert(error.response.data.message);
+      } else {
+        alert("Update profile error!");
+      };
+    };
+  }
 
   useEffect(() => {
     const token = localStorage.getItem("@foodreview:token");
     const user = localStorage.getItem("@foodreview:user");
 
     if (token && user) {
-      api.defaults.headers.authorization = `Bearer ${token}`;
+      api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
       setData({
         token,
@@ -52,6 +79,7 @@ function signOut() {
     <AuthContext.Provider value={{ 
       signIn, 
       signOut,
+      updateProfile,
       user: data.user
     }}>
       { children }

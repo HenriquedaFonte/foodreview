@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import openEye from "../../assets/eye.svg";
+import closeEye from "../../assets/eye-off.svg";
 
 export const Container = styled.div`
   width: 100%;
@@ -22,6 +24,8 @@ export const Container = styled.div`
       font-size: 24px;     
       }
   }
+
+ 
 `;
 
 export const Form = styled.form`
@@ -35,6 +39,37 @@ export const Form = styled.form`
   button {
     margin-top: 24px;
   }
+
+  .inputPassword {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  margin-top: 4.5px;
+
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  button {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 290px;
+    border: none;
+
+    width: 24px;
+    height: 24px;
+    
+  }
+}
+
+.showPassword {
+  background: url(${closeEye}) no-repeat center center;
+}
+
+.hidePassword {
+  background: url(${openEye}) no-repeat center center;
+}
 `;
 
 export const Avatar = styled.div`

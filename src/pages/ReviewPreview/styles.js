@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  max-width: 1100px;
   height: 100vh;
+  margin: 0 auto;
   
   display: grid;
   grid-template-rows: 115px auto;
@@ -20,10 +21,16 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 100%;
+  max-width: 100%;
   margin: 5px auto;
   padding: 0 125px;
   overflow-y: auto;
+
+  div.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
   div.titleReview {
     margin-top: 24px;

@@ -82,10 +82,6 @@ export const Form = styled.form`
     display: flex;
     gap: 40px;
 
-    button:nth-child(1) {   
-      background-color: rgba(0,0,0,0.7);
-      color: ${({ theme }) => theme.COLORS.ORANGE}; 
-    }
   }
   
 `;
