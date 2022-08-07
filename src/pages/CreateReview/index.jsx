@@ -55,7 +55,7 @@ export function CreateReview() {
     }
 
     if (newTag) {
-      return alert("A TAG has been written but not added, to complete creation click on the +.")
+      alert("A TAG has been written but not added, to complete creation click on the +.")
     }
 
     await api.post("/reviewNotes", {
@@ -66,8 +66,8 @@ export function CreateReview() {
     });
 
     alert("Review created!");
-    navigate("/");
-  }
+    navigate("/");  
+  };
 
   return (
     <Container>
