@@ -5,6 +5,8 @@ import closeEye from "../../assets/eye-off.svg";
 import { FiEye } from "react-icons/fi";
 
 export const Container = styled.div`
+  max-width: 1280px;
+  margin: 0 auto;
   height: 100vh;
   display: grid;
   grid-template-columns: 45% 55%;
