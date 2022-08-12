@@ -3,7 +3,7 @@ import openEye from "../../assets/eye.svg";
 import closeEye from "../../assets/eye-off.svg";
 
 export const Container = styled.div`
-  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   height: 100vh;
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};

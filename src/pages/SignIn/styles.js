@@ -2,7 +2,6 @@ import styled from "styled-components";
 import backgroundImg from "../../assets/backgroundImg.jpg";
 import openEye from "../../assets/eye.svg";
 import closeEye from "../../assets/eye-off.svg";
-import { FiEye } from "react-icons/fi";
 
 export const Container = styled.div`
   max-width: 1280px;

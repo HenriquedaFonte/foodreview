@@ -61,7 +61,7 @@ export function SignIn() {
           onClick={handleSignIn}
         />        
         <ButtonText 
-          title="SingUp" 
+          title="Sign Up" 
           to="/signup" 
         />       
       </Form>
